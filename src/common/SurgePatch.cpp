@@ -626,6 +626,7 @@ SurgePatch::SurgePatch(SurgeStorage* storage)
 
    // Resolve the promise chain
    p_id.resolve();
+   p_mod_triggers.resolveAfter(p_id);
    for (unsigned int i = 0; i < param_ptr.size(); i++)
    {
       param_ptr[i]->id = param_ptr[i]->id_promise->value;

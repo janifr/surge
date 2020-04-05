@@ -183,6 +183,19 @@ struct ParameterIDCounter
          h = h->next;
       }
    }
+
+   void resolveAfter(ParameterIDCounter& other)
+   {
+      auto h = head;
+      int val = 0;
+      //if (other) make check if pointer is valid
+          val = other.tail->value + 1;
+      while (h.get())
+      {
+         h->value = val++;
+         h = h->next;
+      }
+   }
 };
 
 /*
