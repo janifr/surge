@@ -59,6 +59,7 @@ SurgePatch::SurgePatch(SurgeStorage* storage)
    patchptr = nullptr;
 
    ParameterIDCounter p_id;
+   ParameterIDCounter p_mod_triggers;
    {
       int px = gui_col6_x, py = gui_sendfx_y;
 
@@ -147,6 +148,8 @@ SurgePatch::SurgePatch(SurgeStorage* storage)
                     : 0; // only consider parameters in the first scene as non-expertmode parameters
       int px, py;
       int id_s = 0;
+      int id_mod_trigger = 0;
+
       vector<Parameter*>* a;
       a = &param_ptr;
 
