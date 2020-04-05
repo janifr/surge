@@ -70,7 +70,7 @@ extern float samplerate, samplerate_inv;
 extern double dsamplerate, dsamplerate_inv;
 extern double dsamplerate_os, dsamplerate_os_inv;
 
-const int n_scene_params = 295;
+const int n_scene_params = 271;
 const int n_global_params = 113;
 const int n_global_postparams = 1;
 const int n_total_params = n_global_params + 2 * n_scene_params + n_global_postparams;
@@ -344,7 +344,7 @@ struct ADSRStorage
 // I have used the ordering here in CLFOGui to iterate. Be careful if rate or release move from first/last position.
 struct LFOStorage
 {
-   Parameter rate, shape, start_phase, magnitude, deform, mod_trigger, mod_trigger_dt;
+   Parameter rate, shape, start_phase, magnitude, deform;
    Parameter trigmode, unipolar;
    Parameter delay, hold, attack, decay, sustain, release;
 };
