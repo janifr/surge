@@ -109,10 +109,9 @@ enum sub3_lfomode
    lm_freerun = 0,
    lm_keytrigger,
    lm_random,
-   lm_mod_trigger,
    n_lfomodes,
 };
-const char lfomode_abberations[n_lfomodes][16] = {"Freerun", "Keytrigger", "Random", "Modtrigger"};
+const char lfomode_abberations[n_lfomodes][16] = {"Freerun", "Keytrigger", "Random"};
 
 enum sub3_charactermode
 {
