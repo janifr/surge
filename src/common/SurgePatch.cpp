@@ -565,12 +565,12 @@ SurgePatch::SurgePatch(SurgeStorage* storage)
                                                      cg_LFO, ms_lfo1 + l, true, Surge::ParamConfig::kHorizontal));
          py += gui_hfader_dist;
          sprintf(label, "lfo%i_mod_trigger", l);
-         a->push_back(scene[sc].lfo[l].mod_trigger.assign(p_id.next(), id_s++, label, "Modulation trigger value",
-                                                     ct_percent_bidirectional, "lfo.mod_trigger", px, py,
-                                                     sc_id, cg_LFO, ms_lfo1 + l, true, Surge::ParamConfig::kHorizontal));
+         a->push_back(scene[sc].lfo[l].mod_trigger.assign(p_mod_triggers.next(), id_mod_trigger++, label, "Modulation trigger value",
+                                                          ct_percent_bidirectional, "lfo.mod_trigger", px, py,
+                                                          sc_id, cg_LFO, ms_lfo1 + l, true, Surge::ParamConfig::kHorizontal));
          py += gui_hfader_dist;
          sprintf(label, "lfo%i_mod_trigger_dt", l);
-         a->push_back(scene[sc].lfo[l].mod_trigger_dt.assign(p_id.next(), id_s++, label, "Modulation trigger dt",
+         a->push_back(scene[sc].lfo[l].mod_trigger_dt.assign(p_mod_triggers.next(), id_mod_trigger++, label, "Modulation trigger dt",
                                                              ct_percent, "lfo.mod.trigger_dt", px, py, sc_id,
                                                              cg_LFO, ms_lfo1 + l, true, Surge::ParamConfig::kHorizontal));
 
