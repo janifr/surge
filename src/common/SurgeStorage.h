@@ -345,9 +345,9 @@ struct ADSRStorage
 // I have used the ordering here in CLFOGui to iterate. Be careful if rate or release move from first/last position.
 struct LFOStorage
 {
-   Parameter rate, shape, start_phase, magnitude, deform, mod_trigger, mod_trigger_dt;
+   Parameter rate, shape, start_phase, magnitude, deform;
    Parameter trigmode, unipolar;
-   Parameter delay, hold, attack, decay, sustain, release;
+   Parameter delay, hold, attack, decay, sustain, release, mod_trigger, mod_trigger_dt;
 };
 
 struct FxStorage

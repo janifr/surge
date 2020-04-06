@@ -188,8 +188,8 @@ struct ParameterIDCounter
    {
       auto h = head;
       int val = 0;
-      //if (other) make check if pointer is valid
-          val = other.tail->value + 1;
+      if (other.tail != nullptr)
+         val = other.tail->value + 1;
       while (h.get())
       {
          h->value = val++;
